@@ -246,3 +246,9 @@ The result is a controlled and explainable process intelligence workflow that co
 ProcessMirror AI aims to bridge the gap between employee knowledge, process consulting and intelligent automation.
 
 By combining deterministic workflows, specialized AI agents and mandatory human validation, organizations can transform operational knowledge into actionable automation strategies while maintaining transparency, governance and trust.
+
+The workflow JSON files are not publicly distributed by default.
+
+If you would like to review the complete workflow implementation, please contact me with a brief description of your use case. Access can be provided on request for portfolio, educational, research, or recruitment purposes.
+
+This approach helps prevent misuse while still allowing interested reviewers to assess the solution architecture and implementation details.
