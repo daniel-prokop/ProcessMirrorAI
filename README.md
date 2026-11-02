@@ -59,6 +59,78 @@ ProcessMirror AI consists of three coordinated workflows.
 
 ---
 
+# User Experience
+
+In addition to the workflow architecture, ProcessMirror AI provides dedicated user-facing interfaces for process discovery and assessment review.
+
+The platform is intentionally designed for German organizations and therefore uses German-language forms, process terminology and reporting outputs.
+
+This decision reflects the project's focus on operational process consulting, employee process interviews and business compliance requirements within German-speaking environments.
+
+---
+
+# Employee Interview Portal
+
+![Employee Interview Portal](eingabeformular%20screenshot.png)
+
+The employee interview portal is the primary entry point into ProcessMirror AI.
+
+Employees document operational processes, responsibilities, systems, bottlenecks and improvement opportunities through a structured interview experience.
+
+The form supports the collection of process knowledge that is later transformed into:
+
+- Process Documentation
+- Process Diagrams
+- Tool Mappings
+- Automation Assessments
+- ROI Estimations
+
+### Interactive HTML Version
+
+The complete interactive interview experience can be viewed in:
+
+**ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html**
+
+### Why is the form in German?
+
+The platform was designed specifically for German organizations.
+
+Process interviews involve operational details, organizational terminology and potentially compliance-relevant information where precision and user comprehension are critical.
+
+For this reason, the interview interface is intentionally provided in German.
+
+---
+
+# Executive Assessment Report
+
+![Executive Assessment Report](report%20screenshot.png)
+
+After all process information has been reviewed and validated, ProcessMirror AI generates a consultant-style executive report.
+
+The report consolidates:
+
+- Process Documentation
+- Process Diagrams
+- Tool Mappings
+- Automation Opportunities
+- Savings Scenarios
+- Initial ROI Estimations
+- Strategic Recommendations
+
+### Interactive HTML Version
+
+The complete interactive report can be viewed in:
+
+**ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html**
+
+### Why is the report in German?
+
+The report targets German decision-makers, department managers and consultants.
+
+Business terminology, process descriptions and recommendations are therefore presented in German to ensure clarity, consistency and practical applicability within the intended operating environment.
+
+---
+
 # Master Orchestrator
 
 ![Master Workflow](process%20mirror%20ai%2000%20master%20workflow%20screenshot.png)
