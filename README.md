@@ -12,7 +12,7 @@ For hiring teams, the interactive demos and end-to-end workflow make the product
 
 ### See the platform in action
 
-[Open the interactive employee interview demo](./ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [Open the interactive executive assessment report](./ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
+[Open the interactive employee interview demo](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [Open the interactive executive assessment report](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
 
 ![Employee interview portal preview](./eingabeformular%20screenshot.png)
 
