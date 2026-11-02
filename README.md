@@ -8,9 +8,9 @@ Organizations cannot improve work they cannot see. ProcessMirror AI turns struct
 
 Leaders get a clearer view of how work is performed, which systems and roles are involved, and where bottlenecks or improvement opportunities may exist. The workflow establishes and validates the current state before assessing what to improve—giving consultants, executives and teams a shared basis for the next decision.
 
-For hiring teams, the interactive demos and end-to-end workflow make the product's functional scope easy to explore at a glance.
+The demos present the current interactive employee interview form and an example assessment report populated with fictional data. They illustrate the intended user experience and report format (they are not a live, connected end-to-end workflow.)
 
-### See the platform in action
+### Explore the demos
 
 [Open the interactive employee interview demo](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [Open the interactive executive assessment report](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
 
