@@ -507,6 +507,7 @@ The result is a process intelligence workflow that combines deterministic govern
 │
 ├── ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html
 ├── ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html
+├── processmirror-social-preview.png
 │
 ├── eingabeformular screenshot.png
 ├── report screenshot.png
