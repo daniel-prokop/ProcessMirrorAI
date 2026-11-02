@@ -1,418 +1,248 @@
 # ProcessMirror AI
 
-> Human-Validated Process Discovery and Automation Assessment Platform
+> Hybrid AI Consulting Platform for Process Discovery, Documentation and Automation Assessment
 
-ProcessMirror AI is an AI-supported workflow intelligence platform built on n8n.
+ProcessMirror AI is a hybrid workflow intelligence platform that combines deterministic workflow orchestration, specialized AI agents and human-in-the-loop governance.
 
-The platform captures operational knowledge directly from employees, transforms it into structured process documentation, validates the results through human review, and finally identifies realistic automation opportunities.
-
-The guiding principle is simple:
-
-**No automation recommendation without a validated understanding of the current process.**
+The platform automates large parts of a consultant's discovery and assessment work by transforming employee interviews into validated process documentation, process diagrams, tool mappings and automation opportunity assessments.
 
 ---
 
-# Architecture Overview
+## Key Capabilities
 
-The solution is built around three coordinated workflows:
+✅ Employee-driven process discovery
+
+✅ Human-reviewed process validation
+
+✅ Automated process documentation
+
+✅ Automated process diagram generation
+
+✅ Automation opportunity identification
+
+✅ Tool and integration mapping
+
+✅ Cross-process analysis
+
+✅ Executive reporting
+
+✅ Deterministic governance and approval workflows
+
+---
+
+# Solution Architecture
+
+ProcessMirror AI consists of three coordinated workflows.
 
 ```text
-┌────────────────────────────────────┐
-│ 00 MASTER ORCHESTRATOR             │
-│ Campaigns · Reviews · Reporting    │
-└───────────────┬────────────────────┘
-                │
-                ▼
-┌────────────────────────────────────┐
-│ 01 DISCOVERY AGENT                 │
-│ Process Understanding              │
-│ Clarification Questions            │
-│ Diagram Generation                 │
-└───────────────┬────────────────────┘
-                │
-                ▼
-┌────────────────────────────────────┐
-│ 02 ASSESSMENT AGENT                │
-│ Automation Opportunities           │
-│ Savings Validation                 │
-│ Integration Research               │
-└────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│ 00 MASTER ORCHESTRATOR                      │
+│ Campaigns · Reviews · Reporting             │
+└─────────────────┬───────────────────────────┘
+                  │
+                  ▼
+┌─────────────────────────────────────────────┐
+│ 01 DISCOVERY AGENT                          │
+│ Process Understanding                       │
+│ Gap Detection                               │
+│ Diagram Generation                          │
+└─────────────────┬───────────────────────────┘
+                  │
+                  ▼
+┌─────────────────────────────────────────────┐
+│ 02 ASSESSMENT AGENT                         │
+│ Automation Discovery                        │
+│ Tool Mapping                                │
+│ Savings Validation                          │
+└─────────────────────────────────────────────┘
 ```
 
 ---
 
-# Complete Workflow Landscape
+# Master Orchestrator
 
-process%20mirror%20ai%2000%20master%20workflow%20screenshot.png
+![Master Workflow](process%20mirror%20ai%2000%20master%20workflow%20screenshot.png)
 
-The Master Orchestrator controls the complete lifecycle from initial process intake to final company-wide reporting.
+The Master Orchestrator coordinates the complete ProcessMirror lifecycle.
+
+From the first consultant request to the final executive report, all workflow execution, validation logic, communication and reporting are managed centrally.
+
+### Responsibilities
+
+- Campaign creation
+- Employee onboarding
+- Interview management
+- Approval workflows
+- Knowledge aggregation
+- AI workflow orchestration
+- Document generation
+- Report distribution
+
+### Workflow Stages
+
+```text
+01 Kickoff
+    ↓
+02 Invitations
+    ↓
+03 Discovery
+    ↓
+04 Human Review
+    ↓
+05 Consultant Approval
+    ↓
+06 Assessment
+    ↓
+07 Executive Report
+```
 
 ---
 
 # Discovery Agent
 
-process%20mirror%20ai%2001%20discovery%20agent%20screenshot.png
+![Discovery Agent](process%20mirror%20ai%2001%20discovery%20agent%20screenshot.png)
 
-The Discovery Agent focuses on understanding how work is actually performed.
+The Discovery Agent acts as a digital process analyst.
 
-The objective is not automation.
+Its purpose is to understand how work is actually performed inside an organization and convert employee knowledge into structured and reviewable process documentation.
 
-The objective is to create a reliable and reviewable representation of reality.
+### Responsibilities
 
----
+- Process reconstruction
+- Gap detection
+- Follow-up questions
+- Process documentation
+- Process diagram generation
+- Validation support
 
-# Assessment Agent
+### Outputs
 
-process%20mirror%20ai%2002%20assessment%20agent%20screenshot.png
+- Structured process analysis
+- Process description
+- Mermaid source
+- Rendered process diagram
+- Follow-up questions
+- Validation status
 
-The Assessment Agent operates only on approved process knowledge and identifies realistic optimization opportunities.
+### Design Principle
 
-It does not create process documentation.
+The Discovery Agent must never invent information.
 
-It evaluates validated process documentation.
-
----
-
-# Workflow 00 — Master Orchestrator
-
-The Master Workflow serves as the central control layer of ProcessMirror AI.
-
-Responsibilities include:
-
-- campaign creation
-- employee onboarding
-- invitation distribution
-- interview coordination
-- approval workflows
-- document management
-- process aggregation
-- assessment orchestration
-- final reporting
+When required information is unavailable, the agent highlights uncertainties and generates clarification questions instead of making assumptions.
 
 ---
 
-## End-to-End Business Flow
+# Automation Assessment Agent
 
-```text
-Consultant Request
-        │
-        ▼
-Campaign Creation
-        │
-        ▼
-Employee Interviews
-        │
-        ▼
-Process Discovery
-        │
-        ▼
-Employee Validation
-        │
-        ▼
-Consultant Approval
-        │
-        ▼
-Company Assessment
-        │
-        ▼
-HTML Report Generation
-        │
-        ▼
-Delivery & Archival
-```
+![Assessment Agent](process%20mirror%20ai%2002%20assessment%20agent%20screenshot.png)
 
----
+The Automation Assessment Agent evaluates approved process documentation and identifies realistic opportunities for optimization, automation and integration.
 
-## Major Functional Areas
+### Responsibilities
 
-### Kickoff
+- Opportunity assessment
+- Tool mapping
+- Automation discovery
+- Feasibility review
+- Savings validation
+- Integration research
 
-A consultant initiates a process assessment campaign.
+### Connected Assessment Tools
 
-The workflow validates the request and creates the required data structures.
+#### Find Automatable Activities
 
-### Invitations
+Identifies repetitive and automation-friendly process activities.
 
-Employees receive individual and secure process interview links.
+#### Validate Opportunity Mapping
 
-Each employee contributes process knowledge relevant to the assessment.
+Verifies that recommendations can be traced to documented process steps.
 
-### Discovery
+#### Check Savings Assumptions
 
-Process information is submitted to the Discovery Agent.
+Validates assumptions used in projected time-saving calculations.
 
-The Discovery Agent analyses the workflow and detects missing information.
+#### Public Integration Research
 
-### Human Review
+Researches publicly available integration and tooling information when required.
 
-Employees review the generated process description and diagrams.
+### Outputs
 
-Only approved process knowledge can move forward.
-
-### Consultant Approval
-
-A consultant validates the approved process documentation.
-
-This creates an additional governance layer.
-
-### Assessment
-
-Approved process packages are consolidated and submitted to the Automation Assessment Agent.
-
-### Reporting
-
-The platform generates structured reports and automation recommendations.
-
-Results can be archived and distributed automatically.
-
----
-
-# Workflow 01 — Discovery Agent
-
-The Discovery Agent is responsible for understanding operational processes.
-
-It transforms interview input into structured process knowledge.
-
----
-
-## Goals
-
-- understand what actually happens
-- identify process steps
-- identify systems
-- identify responsibilities
-- identify bottlenecks
-- identify missing information
-- generate reviewable documentation
-
----
-
-## What the Agent Does
-
-### Input Validation
-
-Only approved and privacy-cleared inputs are accepted.
-
-### Process Reconstruction
-
-The agent rebuilds:
-
-- process flow
-- tasks
-- participants
-- systems
-- inputs
-- outputs
-- decision points
-
-### Clarification Questions
-
-If information is missing, targeted follow-up questions are generated.
-
-Examples:
-
-- unknown system
-- unclear responsibility
-- incomplete process step
-- missing business rule
-
-### Diagram Generation
-
-The workflow creates:
-
-- written process descriptions
-- process structure
-- Mermaid diagrams
-- rendered diagrams
-
----
-
-## Discovery Principles
-
-The agent should:
-
-✅ ask questions
-
-✅ document uncertainty
-
-✅ identify information gaps
-
-✅ structure process knowledge
-
-The agent should never:
-
-❌ invent process steps
-
-❌ invent systems
-
-❌ invent responsibilities
-
-❌ invent business rules
-
----
-
-## Discovery Output
-
-Returned to the Master Workflow:
-
-- process analysis
-- process structure
-- follow-up questions
-- process diagram
-- review status
-
----
-
-# Workflow 02 — Automation Assessment Agent
-
-The Assessment Agent analyzes approved process knowledge.
-
-The goal is to discover realistic opportunities for optimization and automation.
-
----
-
-## Core Responsibilities
-
-### Opportunity Discovery
-
-Identify:
-
-- repetitive work
-- manual transfers
-- duplicate effort
-- bottlenecks
-- approval delays
-- integration opportunities
-
-### Validation
-
-Ensure recommendations can be traced back to actual process information.
-
-### Assessment
-
-Evaluate:
-
-- expected impact
-- implementation complexity
-- operational risks
-- potential constraints
-
----
-
-# Multi-Tool Assessment Approach
-
-The Assessment Agent utilizes specialized tools.
-
-### Find Automatable Activities
-
-Identifies process steps that may be suitable for automation.
-
-### Validate Opportunity Mapping
-
-Ensures opportunities are linked to documented process steps.
-
-### Check Savings Assumptions
-
-Validates assumptions behind time-saving estimates.
-
-### Public Integration Research
-
-Optionally researches public integration and automation capabilities.
+- Automation opportunities
+- Tool recommendations
+- Integration suggestions
+- Risk observations
+- Assumptions
+- Assessment summaries
 
 ---
 
 # Human-in-the-Loop Governance
 
-Human review is a mandatory part of the architecture.
+Human validation is a mandatory component of the architecture.
 
 ```text
-Employee
-    │
-    ▼
-Process Approval
-    │
-    ▼
-Consultant Validation
-    │
-    ▼
+Employee Interview
+        ↓
+AI Discovery
+        ↓
+Employee Validation
+        ↓
+Consultant Approval
+        ↓
 Automation Assessment
-    │
-    ▼
-Final Report
+        ↓
+Executive Report
 ```
 
-Recommendations are only generated after process knowledge has passed the review chain.
+No automation recommendations are generated before process knowledge has passed human review.
 
 ---
 
-# Design Principles
+# Why ProcessMirror AI?
 
-### Traceability
+Most process improvement initiatives fail because organizations attempt to automate processes they do not fully understand.
 
-Every recommendation should be connected to actual process evidence.
+ProcessMirror AI reverses this approach.
 
-### Explainability
+First understand.
 
-Outputs should be understandable and reviewable.
+Then validate.
 
-### Human Oversight
+Then optimize.
 
-Critical transitions require human approval.
-
-### Privacy First
-
-Only approved and sanitized information should reach agents.
-
-### Modular Architecture
-
-Each workflow focuses on a single responsibility:
-
-- Workflow 00 → Orchestration
-- Workflow 01 → Process Discovery
-- Workflow 02 → Opportunity Assessment
+The result is a controlled and explainable process intelligence workflow that combines deterministic governance with agentic AI capabilities.
 
 ---
 
-# Technology Stack
+# Technology
 
 - n8n
 - AI Agents
 - Human-in-the-Loop Governance
 - Process Discovery
-- Workflow Assessment
-- Diagram Generation
+- Process Analysis
+- Process Diagram Generation
+- Workflow Automation
+- Multi-Agent Architectures
+- Tool-Based AI Assessment
 - HTML Reporting
-- Email Automation
-- Structured Knowledge Capture
 
 ---
 
-# Repository Structure
+# Repository Contents
 
 ```text
-ProcessMirror-AI/
-│
-├── workflows/
-│   ├── 00-master-workflow.json
-│   ├── 01-discovery-agent.json
-│   └── 02-assessment-agent.json
-│
-├── screenshots/
-│   ├── process mirror ai 00 master workflow screenshot.png
-│   ├── process mirror ai 01 discovery agent screenshot.png
-│   └── process mirror ai 02 assessment agent screenshot.png
-│
-└── README.md
+/
+├── README.md
+├── process mirror ai 00 master workflow screenshot.png
+├── process mirror ai 01 discovery agent screenshot.png
+└── process mirror ai 02 assessment agent screenshot.png
 ```
 
 ---
 
-# Current Architecture
+# Project Vision
 
-The implementation consists of three coordinated workflows:
+ProcessMirror AI aims to bridge the gap between employee knowledge, process consulting and intelligent automation.
 
-1. Master Orchestrator
-2. Discovery Agent
-3. Automation Assessment Agent
-
-Together they provide a complete process intelligence pipeline from process capture to validated automation recommendations while maintaining human oversight at critical decision points.
+By combining deterministic workflows, specialized AI agents and mandatory human validation, organizations can transform operational knowledge into actionable automation strategies while maintaining transparency, governance and trust.
