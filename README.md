@@ -2,13 +2,23 @@
 
 > Hybrid AI Consulting Platform for Process Discovery, Process Documentation, Tool Mapping, Automation Assessment and Initial ROI Estimation
 
-ProcessMirror AI is a hybrid workflow intelligence platform that combines deterministic workflow orchestration, specialized AI agents and human-in-the-loop governance.
+## From employee knowledge to decision-ready process intelligence
 
-The platform automates significant parts of a process consultant's discovery and assessment work by transforming employee interviews into validated process analyses, process diagrams, tool mappings, automation opportunities and initial ROI estimations.
+Organizations cannot improve work they cannot see. ProcessMirror AI turns structured employee interviews into validated process documentation and visualizations, then helps teams assess automation opportunities and initial savings and ROI scenarios.
 
-Instead of immediately generating automation recommendations, ProcessMirror AI first establishes a validated understanding of how work is actually performed within an organization.
+Leaders get a clearer view of how work is performed, which systems and roles are involved, and where bottlenecks or improvement opportunities may exist. The workflow establishes and validates the current state before assessing what to improve—giving consultants, executives and teams a shared basis for the next decision.
 
-Only then are optimization and automation opportunities identified.
+For hiring teams, the interactive demos and end-to-end workflow make the product's functional scope easy to explore at a glance.
+
+### See the platform in action
+
+[Open the interactive employee interview demo](./ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [Open the interactive executive assessment report](./ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
+
+![Employee interview portal preview](./eingabeformular%20screenshot.png)
+
+![Executive assessment report preview](./report%20screenshot.png)
+
+The sections below provide the platform's technical documentation, including its capabilities, data flow, workflows and architecture.
 
 ---
 
@@ -58,76 +68,53 @@ while maintaining a controlled approval process throughout the workflow.
 
 ✅ AI-assisted consulting workflows
 
-✅ Privacy-first AI processing
+✅ Pseudonymized LLM processing
 
 ---
 
-# Privacy, Security & Compliance Architecture
+# Privacy-Aware Data Flow
 
-One of the core design objectives of ProcessMirror AI is reducing the exposure of sensitive business information during AI-assisted process analysis.
+ProcessMirror AI uses n8n guardrails to prepare process data before it is sent to an LLM. These guardrails detect and filter personally identifiable information (PII) and secret keys, then pseudonymize values before each LLM call.
 
-A significant portion of the development effort focused on designing a workflow that separates sensitive business identities from AI processing while still preserving business context for reporting.
-
-Before any process information reaches an LLM, the platform performs automated privacy and security preparation.
+After LLM processing, n8n uses the mappings to restore the corresponding values in a controlled workflow step. This describes the implemented data flow; it is not a claim of regulatory compliance, certification or absolute protection.
 
 ## Data Protection Workflow
 
 ```text
 Employee Input
         ↓
-PII Detection
+PII Detection and Filtering
         ↓
-Secret Detection
+Secret Key Detection and Filtering
         ↓
-Pseudonymization
+Pseudonymization before each LLM call
         ↓
 AI Processing
         ↓
-Result Generation
+LLM Result
         ↓
-Identity Restoration
+Controlled Re-Identification by n8n
         ↓
 Business Report
 ```
 
-### Personal Information Filtering
+### PII Filtering and Pseudonymization
 
-Employee names, company names and other identifiable information can be replaced by internal references before AI processing begins.
-
-Example:
+Detected personal information is filtered and values are replaced with pseudonyms before LLM processing. For example:
 
 ```text
 John Doe
       ↓
-EMPLOYEE_01
-
-ACME Manufacturing
-      ↓
-COMPANY_01
+PERSON_01
 ```
 
-### Secret and Credential Filtering
+### Secret Key Filtering
 
-The workflow scans process descriptions for potentially sensitive information such as:
+The n8n guardrails detect and filter secret keys before the data is sent to an LLM. The LLM input is therefore pseudonymized rather than containing the original values handled by these guardrails.
 
-- API Keys
-- Tokens
-- Passwords
-- Credentials
-- Secret Values
-- Internal Identifiers
+### LLM Processing and Re-Identification
 
-Sensitive information is removed or replaced before LLM analysis.
-
-### Pseudonymized AI Analysis
-
-The Discovery Agent and Assessment Agent operate on pseudonymized process representations rather than real identities.
-
-This reduces unnecessary exposure of personal and company-related information during AI processing.
-
-### Controlled Re-Identification
-
-After AI processing is completed, the platform restores the original business context through internally maintained mappings.
+The Discovery Agent and Assessment Agent receive pseudonymized values. After processing, n8n uses the mappings to re-identify corresponding values in the result and restore business context for downstream reporting. Re-identification takes place outside the LLM processing step.
 
 This enables:
 
@@ -137,13 +124,9 @@ This enables:
 - Company-level reporting
 - Executive assessments
 
-without requiring agents to directly process the original identities.
+without sending the original values to the LLM as part of the described flow.
 
-### Compliance-Oriented Design
-
-The architecture was designed specifically for process consulting and operational analysis environments where process descriptions may contain sensitive business information.
-
-Core principles include:
+The workflow includes:
 
 - Data Minimization
 - Pseudonymization
@@ -480,10 +463,10 @@ Automation Assessment
         ↓
 ROI Estimation
         ↓
-Executive
-Many process improvement initiatives attempt to automate processes before they fully understand them.
+Executive Report
+```
 
-ProcessMirror AI reverses that sequence.
+Many process improvement initiatives attempt to automate processes before they fully understand them. ProcessMirror AI reverses that sequence:
 
 ```text
 Understand
@@ -497,7 +480,7 @@ Estimate ROI
 Improve
 ```
 
-The result is a transparent process intelligence workflow that combines deterministic governance, privacy-conscious AI processing and agentic capabilities.
+The result is a process intelligence workflow that combines deterministic governance, pseudonymized LLM processing and human review.
 
 ---
 
