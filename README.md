@@ -520,7 +520,6 @@ The result is a transparent process intelligence workflow that combines determin
 # Repository Contents
 
 ```text
-/
 ├── README.md
 │
 ├── ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html
