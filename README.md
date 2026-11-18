@@ -1,145 +1,101 @@
 # ProcessMirror AI
 
-> Hybrid AI Consulting Platform for Process Discovery, Process Documentation, Tool Mapping, Automation Assessment and Initial ROI Estimation
+**An AI-powered consulting platform that turns employee process knowledge into decision-ready process intelligence.**
 
-## From employee knowledge to decision-ready process intelligence
+[Explore the employee interview](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [View the executive report](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
 
-Organizations cannot improve work they cannot see. ProcessMirror AI turns structured employee interviews into validated process documentation and visualizations, then helps teams assess automation opportunities and initial savings and ROI scenarios.
+![ProcessMirror AI](./processmirror-social-preview.png)
 
-Leaders get a clearer view of how work is performed, which systems and roles are involved, and where bottlenecks or improvement opportunities may exist. The workflow establishes and validates the current state before assessing what to improve—giving consultants, executives and teams a shared basis for the next decision.
+**From fragmented process knowledge to a validated automation and ROI roadmap.**
 
-The demos present the current interactive employee interview form and an example assessment report populated with fictional data. They illustrate the intended user experience and report format (they are not a live, connected end-to-end workflow.)
+---
 
-### Explore the demos
+## Make operational knowledge visible
 
-[Open the interactive employee interview demo](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html) · [Open the interactive executive assessment report](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
+Most organizations do not lack data. They lack a clear picture of how work actually happens.
+
+Process knowledge is often fragmented across departments, systems and employees. Documentation is incomplete, automation initiatives start with assumptions, and consultants must spend significant time collecting and validating information.
+
+**ProcessMirror AI connects process discovery, validation and assessment in one governed workflow.**
+
+Employees provide structured input. AI-supported agents create clear process documentation, maps and opportunities. Human reviewers retain control before results become the basis for executive decisions.
+
+## From interview to improvement roadmap
+
+1. **Capture** employee knowledge through a guided, multi-process interview.
+2. **Discover** activities, roles, systems, dependencies and bottlenecks.
+3. **Validate** the documented process with employees and consultants.
+4. **Assess** automation opportunities and possible savings.
+5. **Estimate** preliminary ROI scenarios based on documented evidence.
+6. **Report** findings in a clear executive-ready format.
+
+---
+
+## Why it matters
+
+| For executives | For consultants | For AI-focused teams |
+|---|---|---|
+| Gain a shared, evidence-based view of current operations and improvement priorities. | Accelerate process discovery while keeping employee knowledge and expert judgment at the center. | Demonstrate governed, multi-agent workflows that combine AI with human review and privacy-aware processing. |
+
+---
+
+## See the platform
+
+### Employee interview
+
+The interactive interview gives employees a structured way to document responsibilities, systems, bottlenecks and improvement ideas across multiple processes.
+
+[Open the live interview demo](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html)
 
 ![Employee interview portal preview](./eingabeformular%20screenshot.png)
 
+### Executive assessment
+
+The assessment view transforms validated process information into a consultant-style report for decision-makers. It brings process documentation, technology mapping and automation potential together in one coherent story.
+
+[Open the live report demo](https://daniel-prokop.github.io/ProcessMirrorAI/ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html)
+
 ![Executive assessment report preview](./report%20screenshot.png)
 
-The sections below provide the platform's technical documentation, including its capabilities, data flow, workflows and architecture.
+Both demos are available in German, reflecting the platform's focus on German organizations and business consulting environments.
 
 ---
 
-## Executive Summary
+## What ProcessMirror AI delivers
 
-Organizations often struggle to improve or automate processes because operational knowledge is fragmented, undocumented or exists only in employees' heads.
+- **Process documentation** with roles, activities, inputs, outputs and dependencies
+- **Visual process flows** that make operational complexity easier to understand
+- **Tool and system mapping** across the current process landscape
+- **Automation opportunity assessment** for repetitive and manual work
+- **Savings scenarios** based on potential time and effort reductions
+- **Initial ROI estimates** with clearly preliminary assumptions
+- **Executive reports** that translate operational detail into actionable priorities
 
-ProcessMirror AI addresses this challenge through a governed workflow that captures employee knowledge, validates it through human review and transforms it into actionable process intelligence.
+## Designed for trustworthy decisions
 
-The platform automatically produces:
-
-- Process Documentation
-- Process Diagrams
-- Tool Mappings
-- Automation Opportunities
-- Savings Scenarios
-- Initial ROI Estimations
-- Executive Reports
-
-while maintaining a controlled approval process throughout the workflow.
-
----
-
-## Key Capabilities
-
-✅ Employee-driven process discovery
-
-✅ Human-reviewed process validation
-
-✅ Automated process documentation
-
-✅ Automated process diagram generation
-
-✅ Tool and integration mapping
-
-✅ Automation opportunity identification
-
-✅ Cross-process analysis
-
-✅ Bottleneck detection
-
-✅ Initial ROI estimation and savings scenarios
-
-✅ Executive reporting
-
-✅ Deterministic governance and approval workflows
-
-✅ AI-assisted consulting workflows
-
-✅ Pseudonymized LLM processing
-
----
-
-# Privacy-Aware Data Flow
-
-ProcessMirror AI uses n8n guardrails to prepare process data before it is sent to an LLM. These guardrails detect and filter personally identifiable information (PII) and secret keys, then pseudonymize values before each LLM call.
-
-After LLM processing, n8n uses the mappings to restore the corresponding values in a controlled workflow step. This describes the implemented data flow; it is not a claim of regulatory compliance, certification or absolute protection.
-
-## Data Protection Workflow
+ProcessMirror AI follows a human-in-the-loop approach:
 
 ```text
-Employee Input
-        ↓
-PII Detection and Filtering
-        ↓
-Secret Key Detection and Filtering
-        ↓
-Pseudonymization before each LLM call
-        ↓
-AI Processing
-        ↓
-LLM Result
-        ↓
-Controlled Re-Identification by n8n
-        ↓
-Business Report
+Understand  →  Document  →  Validate  →  Assess  →  Prioritize
 ```
 
-### PII Filtering and Pseudonymization
+- Employees validate process information.
+- Consultants approve documentation and assessment steps.
+- Findings remain traceable to the reviewed process evidence.
+- AI supports analysis; people retain decision authority.
+- Deterministic workflows provide governance around AI-assisted work.
 
-Detected personal information is filtered and values are replaced with pseudonyms before LLM processing. For example:
+## Privacy-aware processing
 
-```text
-John Doe
-      ↓
-PERSON_01
-```
+ProcessMirror AI includes privacy-focused guardrails within its n8n workflow. Personally identifiable information and secret keys are detected and filtered before pseudonymized data is sent to an LLM. Mapping data is then controlled by n8n to restore business context in downstream results.
 
-### Secret Key Filtering
-
-The n8n guardrails detect and filter secret keys before the data is sent to an LLM. The LLM input is therefore pseudonymized rather than containing the original values handled by these guardrails.
-
-### LLM Processing and Re-Identification
-
-The Discovery Agent and Assessment Agent receive pseudonymized values. After processing, n8n uses the mappings to re-identify corresponding values in the result and restore business context for downstream reporting. Re-identification takes place outside the LLM processing step.
-
-This enables:
-
-- Employee-specific process documentation
-- Department mappings
-- Ownership information
-- Company-level reporting
-- Executive assessments
-
-without sending the original values to the LLM as part of the described flow.
-
-The workflow includes:
-
-- Data Minimization
-- Pseudonymization
-- Human Review
-- Controlled Re-Identification
-- Explainable AI Workflows
-- Human-in-the-Loop Governance
+This is an implemented processing pattern, not a claim of certification or absolute privacy.
 
 ---
 
-# Solution Architecture
+## Platform architecture
 
-ProcessMirror AI consists of three coordinated workflows.
+The platform combines a central orchestrator with specialized AI agents.
 
 ```text
 ┌─────────────────────────────────────────────┐
@@ -150,377 +106,51 @@ ProcessMirror AI consists of three coordinated workflows.
                   ▼
 ┌─────────────────────────────────────────────┐
 │ 01 DISCOVERY AGENT                          │
-│ Process Discovery                           │
-│ Gap Detection                               │
-│ Diagram Generation                          │
+│ Process Discovery · Gap Detection           │
+│ Diagram and Documentation Generation        │
 └─────────────────┬───────────────────────────┘
                   │
                   ▼
 ┌─────────────────────────────────────────────┐
 │ 02 ASSESSMENT AGENT                         │
-│ Tool Mapping                                │
-│ Automation Discovery                        │
-│ ROI Assessment                              │
+│ Tool Mapping · Automation Assessment        │
+│ Savings and Initial ROI Scenarios           │
 └─────────────────────────────────────────────┘
 ```
 
----
+### Master Orchestrator
 
-# Complete Workflow Landscape
+Coordinates campaigns, employee participation, approvals, governance, workflow execution and report delivery.
 
 ![Master Workflow](process%20mirror%20ai%2000%20master%20workflow%20screenshot.png)
 
-The Master Orchestrator coordinates the complete lifecycle from the initial consultant request to the final executive report.
+### Discovery Agent
 
----
-
-# Discovery Agent
+Transforms employee knowledge into structured, reviewable process intelligence. It identifies activities, roles, systems, dependencies and gaps while producing process documentation and visual diagrams.
 
 ![Discovery Agent](process%20mirror%20ai%2001%20discovery%20agent%20screenshot.png)
 
-The Discovery Agent transforms employee knowledge into structured, reviewable and reusable process intelligence.
+### Assessment Agent
 
-Its primary objective is understanding the current state of operations before any optimization is proposed.
-
----
-
-# Assessment Agent
+Evaluates approved process knowledge to identify repetitive work, integration opportunities, automation potential and realistic savings scenarios.
 
 ![Assessment Agent](process%20mirror%20ai%2002%20assessment%20agent%20screenshot.png)
 
-The Assessment Agent evaluates approved process knowledge and generates automation opportunities, tool recommendations and savings assessments based on documented evidence.
-
 ---
 
-# User Experience
+## Technology
 
-In addition to the workflow architecture, ProcessMirror AI provides dedicated user-facing interfaces for process discovery and assessment review.
+- n8n workflow orchestration
+- Multi-agent AI architecture
+- Human-in-the-loop governance
+- Privacy-aware pseudonymization
+- Process and tool mapping
+- Automation and ROI assessment
+- Mermaid process visualization
+- HTML-based executive reporting
 
-The interfaces are intentionally provided in German because the platform was designed for German organizations, operational process consulting and German-speaking business environments.
+## Project vision
 
----
+ProcessMirror AI bridges employee knowledge, process consulting and intelligent automation.
 
-# Employee Interview Portal
-
-![Employee Interview Portal](eingabeformular%20screenshot.png)
-
-The employee interview portal serves as the primary entry point into ProcessMirror AI.
-
-Employees document process knowledge, responsibilities, systems, bottlenecks and improvement opportunities through a structured interview experience.
-
-The interview can be transformed into:
-
-- Process Documentation
-- Process Diagrams
-- Tool Mappings
-- Automation Opportunities
-- Savings Scenarios
-- Initial ROI Estimations
-
-### Interactive Version
-
-The complete interactive interview experience is available in:
-
-**ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html**
-
-### Why is the interview form in German?
-
-ProcessMirror AI was designed for German organizations and operational consulting scenarios.
-
-Business terminology, process descriptions and employee interviews often require precise wording and compliance-sensitive communication.
-
-For that reason, the interview experience is intentionally provided in German.
-
----
-
-# Executive Assessment Report
-
-![Executive Assessment Report](report%20screenshot.png)
-
-After all process information has been reviewed and validated, ProcessMirror AI generates a consultant-style executive report.
-
-The report consolidates:
-
-- Process Documentation
-- Process Diagrams
-- Tool Mappings
-- Automation Opportunities
-- Savings Scenarios
-- Initial ROI Estimations
-- Strategic Recommendations
-
-### Interactive Version
-
-The complete interactive assessment report is available in:
-
-**ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html**
-
-### Why is the assessment report in German?
-
-The generated report targets German decision-makers, department managers and consultants.
-
-Business terminology, recommendations and operational assessments are therefore provided in German to maximize clarity and practical applicability.
-
----
-
-# Workflow 00 — Master Orchestrator
-
-The Master Workflow acts as the central control layer of ProcessMirror AI.
-
-It coordinates communication, governance, approvals, AI interactions and reporting activities.
-
-## Responsibilities
-
-- Campaign creation
-- Employee onboarding
-- Interview management
-- Approval workflows
-- Governance enforcement
-- Knowledge aggregation
-- Workflow orchestration
-- ROI calculations
-- Report generation
-- Report delivery
-
-## End-to-End Business Flow
-
-```text
-Consultant Request
-        │
-        ▼
-Campaign Creation
-        │
-        ▼
-Employee Interviews
-        │
-        ▼
-AI Process Discovery
-        │
-        ▼
-Employee Validation
-        │
-        ▼
-Consultant Approval
-        │
-        ▼
-Automation Assessment
-        │
-        ▼
-ROI Estimation
-        │
-        ▼
-Executive Report
-```
-
----
-
-# Workflow 01 — Discovery Agent
-
-The Discovery Agent acts as a digital process analyst.
-
-Its purpose is to understand how work is actually performed inside an organization and transform unstructured employee knowledge into structured process documentation.
-
-## Core Responsibilities
-
-### Process Discovery
-
-Extracts:
-
-- Activities
-- Inputs
-- Outputs
-- Systems
-- Roles
-- Responsibilities
-- Dependencies
-
-### Gap Detection
-
-Identifies:
-
-- Missing information
-- Incomplete descriptions
-- Unknown responsibilities
-- Missing system references
-
-### Clarification Support
-
-Generates targeted follow-up questions whenever documentation quality is insufficient.
-
-### Diagram Generation
-
-Produces:
-
-- Process Documentation
-- Process Models
-- Mermaid Diagrams
-- Visual Process Flows
-
-## Discovery Principles
-
-The Discovery Agent should:
-
-✅ ask questions
-
-✅ document uncertainties
-
-✅ identify knowledge gaps
-
-✅ structure information
-
-The Discovery Agent should never:
-
-❌ invent process steps
-
-❌ invent systems
-
-❌ invent stakeholders
-
-❌ invent business rules
-
-❌ invent metrics
-
----
-
-# Workflow 02 — Automation Assessment Agent
-
-The Assessment Agent evaluates validated process knowledge and identifies realistic optimization opportunities.
-
-Unlike the Discovery Agent, its objective is not understanding the process.
-
-Its objective is improving the process.
-
-## Core Responsibilities
-
-### Automation Opportunity Discovery
-
-Identifies:
-
-- Repetitive activities
-- Manual transfers
-- Approval bottlenecks
-- Duplicate work
-- Delays
-- Integration opportunities
-
-### Tool Mapping
-
-Links opportunities to suitable technology and implementation approaches.
-
-### Savings Assessment
-
-Evaluates:
-
-- Potential effort reductions
-- Time-saving opportunities
-- Efficiency improvements
-
-### Initial ROI Estimation
-
-Creates rough ROI scenarios based on documented process metrics.
-
-Examples include:
-
-- Estimated hours saved per month
-- Estimated hours saved per year
-- Estimated labor cost reductions
-- Estimated financial impact ranges
-
-ROI figures are intentionally presented as preliminary estimations rather than guaranteed business outcomes.
-
-## Connected Assessment Tools
-
-### Find Automatable Activities
-
-Identifies automation-friendly process steps.
-
-### Validate Opportunity Mapping
-
-Ensures recommendations can be traced back to documented process evidence.
-
-### Check Savings Assumptions
-
-Validates assumptions behind estimated efficiency gains.
-
-### Public Integration Research
-
-Researches publicly available tools, integrations and implementation options.
-
----
-
-# Human-in-the-Loop Governance
-
-```text
-Employee Interview
-        ↓
-AI Discovery
-        ↓
-Employee Validation
-        ↓
-Consultant Approval
-        ↓
-Automation Assessment
-        ↓
-ROI Estimation
-        ↓
-Executive Report
-```
-
-Many process improvement initiatives attempt to automate processes before they fully understand them. ProcessMirror AI reverses that sequence:
-
-```text
-Understand
-      ↓
-Validate
-      ↓
-Assess
-      ↓
-Estimate ROI
-      ↓
-Improve
-```
-
-The result is a process intelligence workflow that combines deterministic governance, pseudonymized LLM processing and human review.
-
----
-
-# Technology Stack
-
-- n8n
-- Deterministic Workflow Orchestration
-- Multi-Agent Architecture
-- Human-in-the-Loop Governance
-- Process Discovery
-- Process Analysis
-- Process Diagram Generation
-- Tool Mapping
-- Automation Assessment
-- ROI Estimation
-- HTML Reporting
-
----
-
-# Repository Contents
-
-```text
-├── README.md
-│
-├── ProcessMirror_AI_SAVI_Interviewformular_Multiprozess.html
-├── ProcessMirror_AI_SAVI_Abschlussbericht_Demo-GmbH.html
-├── processmirror-social-preview.png
-│
-├── eingabeformular screenshot.png
-├── report screenshot.png
-│
-├── process mirror ai 00 master workflow screenshot.png
-├── process mirror ai 01 discovery agent screenshot.png
-└── process mirror ai 02 assessment agent screenshot.png
-```
-
----
-
-# Project Vision
-
-ProcessMirror AI bridges the gap between employee knowledge, process consulting and intelligent automation.
-
-By combining deterministic workflows, AI agents, privacy-aware processing, governance controls and human validation, organizations can transform operational knowledge into actionable automation initiatives while maintaining transparency, traceability and trust.
+By combining governed workflows, specialized AI agents and human validation, it helps organizations turn operational knowledge into a transparent and actionable automation roadmap.
